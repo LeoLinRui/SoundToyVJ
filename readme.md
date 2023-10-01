@@ -13,3 +13,19 @@
 "Factory Lights" (https://skfb.ly/otNyV) by Lena Pauly is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 "Hook" (https://skfb.ly/onGUt) by lakeap1 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Gas tank" (https://skfb.ly/oAwGM) by ittoKubashi7 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Scaffold Set Free" (https://skfb.ly/oywVX) by RonKo Studio is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Construction Scaffold coverage" (https://skfb.ly/oCJKU) by assetfactory is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"curved_scaffold" (https://skfb.ly/IJXr) by Mike Rowley is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Global truss" (https://skfb.ly/ozxvT) by Loire Dessin Patrimoine 3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Global truss" (https://skfb.ly/ozxvT) by Loire Dessin Patrimoine 3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Construction Prop" (https://skfb.ly/oEpWo) by jimbogies is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Construction steel beam 4" (https://skfb.ly/oCCC6) by assetfactory is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
