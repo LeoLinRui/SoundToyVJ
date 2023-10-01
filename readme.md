@@ -11,3 +11,5 @@
 "Free Random Factory Assets" (https://skfb.ly/6UusN) by Sake de Jong is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 "Factory Lights" (https://skfb.ly/otNyV) by Lena Pauly is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Hook" (https://skfb.ly/onGUt) by lakeap1 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
