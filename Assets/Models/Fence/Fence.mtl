@@ -1,0 +1,69 @@
+# Blender MTL File: 'Fence.blend'
+# Material Count: 6
+
+newmtl Al
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.156104 0.224330 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\TexTuras\\11 Metals\\Rejas\\Alambre.png
+map_d D:\\TexTuras\\11 Metals\\Rejas\\Alambre.png
+
+newmtl Base
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.458146 0.680055
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\TexTuras\\1 Piso\\Concrete\\Co06a.JPG
+
+newmtl Fence
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.227879 0.302890 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\INSPIRON\\Downloads\\Nueva carpeta\\chain_link_fence_material\\textures\\Chainlink_Fence_baseColor.png
+map_d C:\\Users\\INSPIRON\\Downloads\\Nueva carpeta\\chain_link_fence_material\\textures\\Chainlink_Fence_baseColor.png
+
+newmtl Material
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Metal0
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.562464 0.074636
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\TexTuras\\11 Metals\\2fa3dba20e71f96f70b9e2c935441095.jpg
+
+newmtl metal
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.244920 0.105070
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\TexTuras\\11 Metals\\2fa3dba20e71f96f70b9e2c935441095.jpg
