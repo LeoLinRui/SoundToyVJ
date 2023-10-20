@@ -1,0 +1,594 @@
+{
+    "name": "MIDI Input",
+    "maps": [
+        {
+            "name": "Send A",
+            "id": "2753b829-4a4f-4f9d-9ce6-8eca456cd5fd",
+            "actions": [
+                {
+                    "name": "A",
+                    "type": "Value",
+                    "id": "91201551-579a-4aeb-933b-8f5ceff8b782",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "B",
+                    "type": "Value",
+                    "id": "71c81677-1cda-49bf-95ba-7875cc74dc16",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "C",
+                    "type": "Value",
+                    "id": "2a0f265b-b560-4c78-a6d6-66fb72fc7533",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "D",
+                    "type": "Value",
+                    "id": "27529a14-73ef-48b6-9fef-57dd492126c8",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "E",
+                    "type": "Value",
+                    "id": "84637ec0-2019-4048-a818-8aa375ca7891",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "F",
+                    "type": "Value",
+                    "id": "91e7d493-d7e1-41e1-9ced-013da46faf47",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "G",
+                    "type": "Value",
+                    "id": "3f9df043-d65e-4181-97be-4581a4d08d30",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "H",
+                    "type": "Value",
+                    "id": "ddf2f7ba-ec97-450a-bd55-154b97b26f42",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1efb6e1c-6c03-47be-aaba-be40bd2ff648",
+                    "path": "<MidiDevice>/control013",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd5b4818-8116-4607-8417-fc04907923a5",
+                    "path": "<MidiDevice>/control014",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fcab55f4-ab7c-4e82-9133-d69a61fc9037",
+                    "path": "<MidiDevice>/control015",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30c427c2-54c0-4f3e-8cf9-10c0b9dda419",
+                    "path": "<MidiDevice>/control016",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c457603-daf4-483e-80a8-a7ae429c3555",
+                    "path": "<MidiDevice>/control017",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f49a0f09-1846-4157-924d-fd0c3822fc0f",
+                    "path": "<MidiDevice>/control018",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5984aab0-7bf9-46c7-82ab-05bc181969d1",
+                    "path": "<MidiDevice>/control019",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9c4d6f4-1f03-4b72-9d9b-bcb3fea7f8ff",
+                    "path": "<MidiDevice>/control020",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "H",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Send B",
+            "id": "d6fca4b5-6500-4c81-a68a-3c85ad096062",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "3e6e30ff-bcbb-4da9-b373-40b0f414efae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6b97d3f-b19c-437b-8d06-60f48e27c4f5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Pan Device",
+            "id": "3a4eef8a-fefa-429f-af47-163e2b67130e",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "593cad1a-9eff-43e5-bf38-89f96d57faf8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b5e84aa6-7fea-4e60-b42f-dbd33b274177",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Sliders",
+            "id": "df3bcd50-9bc8-470a-a1b6-d970628ae0c1",
+            "actions": [
+                {
+                    "name": "A",
+                    "type": "Value",
+                    "id": "273ce2b2-4afd-4da0-a4f6-f4b30d0d9eda",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "B",
+                    "type": "Value",
+                    "id": "242548c9-72db-4925-aee9-db4e860576aa",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "C",
+                    "type": "Value",
+                    "id": "f935b291-5ba7-4194-9f24-73af73a98a66",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "D",
+                    "type": "Value",
+                    "id": "5426b444-89b3-49ac-b8bb-e5ccbccba092",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "E",
+                    "type": "Value",
+                    "id": "8945a7fd-707b-450a-82d4-52ca765c25ea",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "F",
+                    "type": "Value",
+                    "id": "1bbc890d-bfd0-4fd1-95b3-dcfc239070f7",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "G",
+                    "type": "Value",
+                    "id": "cb3a4ab1-0e4d-478b-9d79-7eeba249b39c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "H",
+                    "type": "Value",
+                    "id": "6f9ba37a-efcc-4d5d-9f21-fcc1807e705a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "784c6967-ec9d-4358-9706-fd2d11e77163",
+                    "path": "<MidiDevice>/control077",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f354a4e-e213-4456-94a8-9bdcdf440749",
+                    "path": "<MidiDevice>/control078",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5397dfb8-1565-4fb4-b499-1858710e20b6",
+                    "path": "<MidiDevice>/control079",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfcae609-878a-4b1f-9f17-9d1d4606dc4a",
+                    "path": "<MidiDevice>/control080",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50daeae5-e44f-4435-aefe-4b699a0edc92",
+                    "path": "<MidiDevice>/control081",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "382e82bd-8c80-4fc0-9567-5d2f71a7a9ad",
+                    "path": "<MidiDevice>/control082",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f6e5760-d5ae-4deb-b5be-8e21030be4fe",
+                    "path": "<MidiDevice>/control083",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8428a560-27dd-458b-8049-c73f29b34bbc",
+                    "path": "<MidiDevice>/control084",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "H",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Track Focus",
+            "id": "77d0934a-cb30-4382-a427-8672cd628043",
+            "actions": [
+                {
+                    "name": "A",
+                    "type": "Button",
+                    "id": "6123b016-7c0e-4629-9c97-522fe0769387",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "8fedcb8f-7de4-42c2-9a88-5c46fc4a9894",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "C",
+                    "type": "Button",
+                    "id": "903f5c42-3111-406b-ba35-467aa94bca8a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "D",
+                    "type": "Button",
+                    "id": "fefd0783-3c47-42bf-a2bd-773d73e0ef38",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "E",
+                    "type": "Button",
+                    "id": "19009d51-26d7-4d59-9899-a3bc117c8561",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "F",
+                    "type": "Button",
+                    "id": "f1424b9c-ed38-4a82-a4f8-37f4b5564e9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "G",
+                    "type": "Button",
+                    "id": "8f5770e5-dfbf-4117-8f97-12c015f7cab9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "H",
+                    "type": "Button",
+                    "id": "b455d512-218a-4437-ad2e-64737417b346",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "80bf2fe2-c405-46fd-94ec-376e1fb5fa9e",
+                    "path": "<MidiDevice>/note041",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ada67248-9d09-4100-b85a-81681017627d",
+                    "path": "<MidiDevice>/note042",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d891fd4a-06fe-467a-b3c0-fef50faf98bd",
+                    "path": "<MidiDevice>/note043",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d262998-1818-4c19-b305-b1d7b330b79a",
+                    "path": "<MidiDevice>/note044",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "578d0e4d-b0b7-4223-bb9f-c88e1744f86d",
+                    "path": "<MidiDevice>/note057",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e7644b0c-ea28-4117-b288-8d51b4a9fdb0",
+                    "path": "<MidiDevice>/note058",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3fda107-57b5-4df2-8925-06155b5d9f9e",
+                    "path": "<MidiDevice>/note059",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6cdfc04-121b-4341-9987-f793167d8d22",
+                    "path": "<MidiDevice>/note060",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "H",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Track Control",
+            "id": "83fd8a6a-918a-473b-b485-724d74d83089",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "29ea38b4-d782-413f-8ba6-2398d5595d0c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0a683a0b-f565-4dd4-a242-d3222ba77aa7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
