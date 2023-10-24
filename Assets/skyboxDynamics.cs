@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class skyboxDynamics : MonoBehaviour
 {
-    public LightingSettings lightSettings;
+    [Range(0, 1)] public float skyBoxInterp;
+    public Material skyBoxMat;
+    private float lastInterp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        skyBoxInterp = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(lastInterp != skyBoxInterp) {
+            skyBoxMat.SetFloat("_InterpAmount", skyBoxInterp);
+            RenderSettings.ambientIntensity = skyBoxInterp;
+            RenderSettings.reflectionIntensity = skyBoxInterp/2;
+        }
+        lastInterp = skyBoxInterp;
     }
 }

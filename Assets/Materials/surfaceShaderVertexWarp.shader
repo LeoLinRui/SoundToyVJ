@@ -68,7 +68,8 @@ Shader "Custom/surfaceShaderVertexWarp"
 
           worldPos.y -= (dist*dist)/5000;
 
-          v.vertex = mul(unity_WorldToObject, worldPos);*/
+          v.vertex = mul(unity_WorldToObject, worldPos);
+          */
         }
 
         sampler2D _MainTex;
