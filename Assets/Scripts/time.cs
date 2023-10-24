@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Time : MonoBehaviour
+public class TimeController : MonoBehaviour
 {
     public InputActionAsset actionAsset;  // Drag your Input Actions asset here in the Inspector
     private InputAction control77Action;
@@ -24,7 +24,7 @@ public class Time : MonoBehaviour
     {
         float value = context.ReadValue<float>();
         Debug.Log(value);
-        // Time.timeScale = value;
+        Time.timeScale = 0.5f + value;
     }
 
     private void OnEnable()
