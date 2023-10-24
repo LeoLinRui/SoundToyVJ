@@ -18,12 +18,15 @@ Shader "Custom/TransparentWarpShaderCullOff"
     SubShader
     {
         Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+        ZWrite Off
+        Cull Off
         LOD 200 
         CGPROGRAM
 
         // Physically based Standard lighting model, and enable shadows on all light types
-         #pragma surface surf Standard fullforwardshadows alpha:fade
-        #pragma vertex vert
+        #pragma surface surf Standard fullforwardshadows 
+        #pragma vertex vert alpha:fade
+
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
