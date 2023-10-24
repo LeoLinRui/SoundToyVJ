@@ -1,19 +1,19 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Time : MonoBehaviour
+public class YourClassName : MonoBehaviour
 {
-    public InputActionMap Sliders;
+    public InputActionAsset actionAsset;  // Drag your Input Actions asset here in the Inspector
     private InputAction control77Action;
-    private float control77Value;
 
     private void Awake()
     {
-        // Obtain the action from the action map
-        control77Action = Sliders.FindAction("A");
+        // Assuming your action map's name is "Sliders"
+        InputActionMap slidersMap = actionAsset.FindActionMap("Sliders");
 
-        // Register the callback for the slider action
+        // From the map, get the specific action. Assuming it's named "A"
+        control77Action = slidersMap.FindAction("A");
+
         if (control77Action != null)
         {
             control77Action.performed += OnControl77Performed;
@@ -22,9 +22,8 @@ public class Time : MonoBehaviour
 
     private void OnControl77Performed(InputAction.CallbackContext context)
     {
-        control77Value = context.ReadValue<float>();
-        // Now you can use control77Value in any way you need within your script
-        Debug.Log(control77Value);
+        float value = context.ReadValue<float>();
+        // Use 'value' as needed
     }
 
     private void OnEnable()
