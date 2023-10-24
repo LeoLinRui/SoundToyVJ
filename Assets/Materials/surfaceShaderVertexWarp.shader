@@ -62,6 +62,7 @@ Shader "Custom/surfaceShaderVertexWarp"
 
         void vert (inout appdata_full v)
         {
+          
           /*float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
           float dist = length(_WorldSpaceCameraPos.xyz - worldPos.xyz);
 

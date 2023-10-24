@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class skyboxDynamics : MonoBehaviour
 {
-    public LightingSettings lightSet;
+    public LightingSettings lightSettings;
     // Start is called before the first frame update
     void Start()
     {
