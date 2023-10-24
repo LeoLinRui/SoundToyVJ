@@ -12,7 +12,7 @@ public class cameraController : MonoBehaviour
 
     private void Awake()
     {
-        InputActionMap buttonMap = actionAsset.FindActionMap("TrackFocus");
+        InputActionMap buttonMap = actionAsset.FindActionMap("Track Focus");
 
         Debug.Assert(virtualCameras.Length <= 8);
 
