@@ -1,20 +1,13 @@
-Shader "Custom/surfaceShaderVertexWarp"
+Shader "Custom/TransparentWarpShaderCullOff"
 {
     Properties {
         _Color ("Color", Color) = (1.000000,1.000000,1.000000,1.000000)
         _MainTex ("Albedo", 2D) = "white" { }
-        //_Cutoff ("Alpha Cutoff", Range(0.000000,1.000000)) = 0.500000
+
         _Glossiness ("Smoothness", Range(0.000000,1.000000)) = 0.500000
-        //_GlossMapScale ("Smoothness Scale", Range(0.000000,1.000000)) = 1.000000
-        //[Enum(Metallic Alpha,0,Albedo Alpha,1)]  _SmoothnessTextureChannel ("Smoothness texture channel", Float) = 0.000000
-        //[Gamma]  _Metallic ("Metallic", Range(0.000000,1.000000)) = 0.000000
          [NoScaleOffset]_MetallicGlossMap ("Metallic", 2D) = "black" { }
-        //[ToggleOff]  _SpecularHighlights ("Specular Highlights", Float) = 1.000000
-        //[ToggleOff]  _GlossyReflections ("Glossy Reflections", Float) = 1.000000
-        //_BumpScale ("Scale", Float) = 1.000000
+
         [Normal] _BumpMap ("Normal Map", 2D) = "bump" { }
-        // _Parallax ("Height Scale", Range(0.005000,0.080000)) = 0.020000
-        // _ParallaxMap ("Height Map", 2D) = "black" { }
         [NoScaleOffset]_OcclusionMap ("Occlusion", 2D) = "white" { }
         _EmissionColor ("Color", Color) = (0.000000,0.000000,0.000000,1.000000)
         [NoScaleOffset]_EmissionMap ("Emission", 2D) = "white" { }
@@ -24,12 +17,12 @@ Shader "Custom/surfaceShaderVertexWarp"
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
         LOD 200 
         CGPROGRAM
 
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+         #pragma surface surf Standard fullforwardshadows alpha:fade
         #pragma vertex vert
 
         // Use shader model 3.0 target, to get nicer looking lighting
