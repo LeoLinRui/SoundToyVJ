@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class YourClassName : MonoBehaviour
+public class Time : MonoBehaviour
 {
     public InputActionAsset actionAsset;  // Drag your Input Actions asset here in the Inspector
     private InputAction control77Action;
