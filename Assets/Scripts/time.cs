@@ -23,7 +23,8 @@ public class YourClassName : MonoBehaviour
     private void OnControl77Performed(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
-        // Use 'value' as needed
+        Debug.Log(value);
+        // Time.timeScale = value;
     }
 
     private void OnEnable()
