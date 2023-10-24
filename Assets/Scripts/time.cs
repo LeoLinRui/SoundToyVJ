@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class TimeController : MonoBehaviour
 {
     public InputActionAsset actionAsset;  // Drag your Input Actions asset here in the Inspector
+    public AudioSource audioSource;
     private InputAction control77Action;
 
     private void Awake()
@@ -25,15 +26,16 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
         Debug.Log(value);
         Time.timeScale = 0.5f + value;
+        audioSource.pitch = 0.5f + value;
     }
 
     private void OnEnable()
     {
-        control77Action?.Enable();
+        //control77Action?.Enable();
     }
 
     private void OnDisable()
     {
-        control77Action?.Disable();
+        //control77Action?.Disable();
     }
 }
