@@ -48,9 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2724547305728486048, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584716408912749921, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3684925330289163313, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
       propertyPath: m_Name
       value: Assembly Line Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540251892096689318, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939435965676587656, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085892075716989820, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209086903201293876, guid: 5ca6253f9400f524991c55e6b968e1b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
