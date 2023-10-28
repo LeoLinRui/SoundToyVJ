@@ -7,7 +7,7 @@ public class waypoints : MonoBehaviour
     public uint numWaypoints = 6;
     
     [System.NonSerialized]
-    public List<Transform> waypointTransforms = new List<Transform>();
+    public List<Transform> path = new List<Transform>();
 
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class waypoints : MonoBehaviour
             Transform childTransform = this.transform.Find(i.ToString());
             if (childTransform != null)
             {
-                waypointTransforms.Add(childTransform);
+                path.Add(childTransform);
             }
         }
     }
