@@ -27471,7 +27471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2236182362785120869}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0013724257, y: -0.9876967, z: 0.15613467, w: -0.008681866}
+  m_LocalRotation: {x: -0.0012702773, y: -0.9877022, z: 0.15613554, w: -0.008035682}
   m_LocalPosition: {x: -0.01, y: 1.43, z: 4.41}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0
@@ -64567,7 +64567,7 @@ MonoBehaviour:
   m_HorizontalDamping: 0.5
   m_VerticalDamping: 0.5
   m_ScreenX: 0.51
-  m_ScreenY: 0.5
+  m_ScreenY: 0.828
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0.82
@@ -64613,8 +64613,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5282793985155632950}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15169287, y: -0.5406769, z: 0.099850796, w: 0.8213936}
-  m_LocalPosition: {x: 4.39, y: 1.84, z: -1.97}
+  m_LocalRotation: {x: -0.02712241, y: -0.5508791, z: -0.017916108, w: 0.8339518}
+  m_LocalPosition: {x: 6.79, y: 1.27, z: -3.01}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64637,7 +64637,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 50
+  m_Priority: 100
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 6253590053703640011}
   m_Follow: {fileID: 0}
@@ -65962,7 +65962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450484773281258858}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.4993976, y: -0.5004682, z: 0.49180874, w: -0.5081907}
+  m_LocalRotation: {x: -0.4990761, y: -0.50080025, z: 0.49213493, w: -0.5078636}
   m_LocalPosition: {x: -0.04, y: 4.63, z: 0}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0
@@ -68026,8 +68026,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5690260802514850658}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1452914, y: -0.5349137, z: 0.093976445, w: -0.8269983}
-  m_LocalPosition: {x: -4.66, y: 1.84, z: -2.01}
+  m_LocalRotation: {x: -0.056532703, y: -0.515867, z: 0.034144368, w: -0.8541192}
+  m_LocalPosition: {x: -3.6, y: 0.65, z: -1.55}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -68050,12 +68050,12 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 50
+  m_Priority: 150
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 6253590053703640011}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 30
     OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 3000
@@ -72765,7 +72765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6041766858134622474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04708059, y: -0.0042648423, z: 0.00020101605, w: 0.998882}
+  m_LocalRotation: {x: 0.04708078, y: -0.0032285496, z: 0.00015217219, w: 0.99888587}
   m_LocalPosition: {x: -0.02, y: 0.12, z: -1.27}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0
@@ -75034,12 +75034,12 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.5
   m_VerticalDamping: 0.5
-  m_ScreenX: 0.51
-  m_ScreenY: 0.5
+  m_ScreenX: 0.5753749
+  m_ScreenY: 0.5600281
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.82
-  m_SoftZoneHeight: 0.817
+  m_SoftZoneWidth: 0.829
+  m_SoftZoneHeight: 0.844
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -106416,7 +106416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8855974639262280245}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21069853, y: -0.0050822804, z: 0.0010954353, w: 0.9775373}
+  m_LocalRotation: {x: 0.21069922, y: -0.004442744, z: 0.00095758965, w: 0.97754043}
   m_LocalPosition: {x: -0.02, y: 1.84, z: -4.07}
   m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 0

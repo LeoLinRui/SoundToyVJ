@@ -21,7 +21,7 @@ public class chickenManager : MonoBehaviour
         Debug.Log("AnimationPath: " + path.Length);
         chickens.Add(Instantiate(mamaChicken, path[0]));
         iTween.MoveTo(chickens[0], iTween.Hash("name", "chickenAnimation", 
-                                               "time", 90.0f, 
+                                               "time", 50.0f, 
                                                "path", path, 
                                                "looktime", 1, 
                                                "lookahead", 0.6,
