@@ -83,13 +83,13 @@ Shader "Custom/surfaceShaderVertexWarpScrolling"
         void surf (Input IN, inout SurfaceOutputStandard o) {
             //scorlling
             float2 newUV = IN.uv_MainTex;
-            newUV.y  += _Time;
+            newUV.y  -= _Time;
             o.Emission = _EmissionColor*tex2D(_OcclusionMap, newUV);
             o.Smoothness = _Glossiness;
-            o.Albedo = _Color*tex2D (_MainTex, IN.uv_MainTex).rgb;
-            o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_MainTex));
-            o.Metallic = tex2D(_MetallicGlossMap, IN.uv_MainTex);
-            o.Occlusion = tex2D(_OcclusionMap, IN.uv_MainTex);
+            o.Albedo = _Color*tex2D (_MainTex, newUV).rgb;
+            o.Normal = UnpackNormal(tex2D(_BumpMap, newUV));
+            o.Metallic = tex2D(_MetallicGlossMap, newUV);
+            o.Occlusion = tex2D(_OcclusionMap, newUV);
         }
         ENDCG
     }
