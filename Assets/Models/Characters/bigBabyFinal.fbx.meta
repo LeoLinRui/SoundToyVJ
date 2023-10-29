@@ -5,6 +5,56 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair
+    second: {fileID: 2100000, guid: 8531bc4319b7eca4aa904a7271915b52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEyeMat
+    second: {fileID: 2100000, guid: 5ab53b871acda5c48a54287e8f9826ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LipssMat
+    second: {fileID: 2100000, guid: 61f1287cadc30e54090c48dfc446a1e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MouthFlesh
+    second: {fileID: 2100000, guid: 27968895225e7554abb5f7c7700aefd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlateMat
+    second: {fileID: 2100000, guid: 5866138a58c286945a1ce5bafd789672, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REyeMat
+    second: {fileID: 2100000, guid: 87690cacce0e6f043a6670c144cb05e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SilverwareMat
+    second: {fileID: 2100000, guid: 3e6f4f1bc11bb8b4bbd43a768740174f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinMat
+    second: {fileID: 2100000, guid: 830560f3ffb611f4686288cfe92ca5be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableCloth
+    second: {fileID: 2100000, guid: e79da07cacbaf904cbea8844a6f559cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: diaperMat
+    second: {fileID: 2100000, guid: c58cd71c5f09c3e47bc6615bf1b20f41, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Auge1_baseColor
