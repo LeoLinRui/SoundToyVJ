@@ -64609,7 +64609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5282793985155632950}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.017916115, y: 0.8339518, z: 0.02712242, w: 0.5508791}
+  m_LocalRotation: {x: -0.017916111, y: 0.8339518, z: 0.027122414, w: 0.5508791}
   m_LocalPosition: {x: -68.18082, y: 9.611013, z: 29.608265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -65958,7 +65958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450484773281258858}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4921358, y: -0.50786275, z: 0.4990753, w: 0.500801}
+  m_LocalRotation: {x: 0.49213532, y: -0.5078632, z: 0.49907568, w: 0.5008006}
   m_LocalPosition: {x: 0.119188204, y: 43.21102, z: -0.4917357}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -72761,7 +72761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6041766858134622474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0001521722, y: 0.99888587, z: -0.047080785, w: 0.0032285494}
+  m_LocalRotation: {x: 0.00015217219, y: 0.99888587, z: -0.047080785, w: 0.003228549}
   m_LocalPosition: {x: -0.08081179, y: -1.8889862, z: 12.208263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -111479,7 +111479,7 @@ Transform:
   m_GameObject: {fileID: 9094672544342823695}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.269, z: -0.04917357}
+  m_LocalPosition: {x: -0, y: 0.358, z: -0.04917357}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112063,7 +112063,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -112116,7 +112116,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 2
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
