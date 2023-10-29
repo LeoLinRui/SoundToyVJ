@@ -5,6 +5,8 @@ using UnityEngine;
 public class EatingColliderBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject tubeMesh;
+    public GameObject chairMesh;
     void Start()
     {
         

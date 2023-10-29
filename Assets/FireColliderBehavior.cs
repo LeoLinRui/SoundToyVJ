@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireColliderBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Material defeatheredMat;
     void Start()
     {
         

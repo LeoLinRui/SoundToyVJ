@@ -103,7 +103,7 @@ Shader "Custom/carSurfaceShaderVertexWarp"
 
               float3 texCol = tex2D (_MainTex, IN.uv_MainTex).rgb;
               float mask = step(0.1, texCol);
-              float3 randCol = float3((baseWorldPos.z % 2.7f)/2.7f, 0.3f, 0.7f);
+              float3 randCol = float3(((baseWorldPos.z + baseWorldPos.x)% 22.7f)/22.7f, 0.3f, 0.7f);
               HSV_to_RGB(randCol, randCol);
 
 

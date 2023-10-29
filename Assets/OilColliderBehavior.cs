@@ -5,6 +5,7 @@ using UnityEngine;
 public class OilColliderBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Material cookedMat;
     void Start()
     {
         
