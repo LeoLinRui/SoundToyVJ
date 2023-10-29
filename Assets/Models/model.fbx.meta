@@ -3,7 +3,32 @@ guid: bcdb0531cc881a54ba28a46708a84a4f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_EPal
+    second: {fileID: 2100000, guid: b71fa4c7d2eba5442997736ce5037cb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Factory_Bridge
+    second: {fileID: 2100000, guid: ce2fa29eb9f25c648adc85bb1642ba57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Safety_Ladder
+    second: {fileID: 2100000, guid: dd046b141b88865498e4b12e7bfdc977, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Support_Pillar_Clean
+    second: {fileID: 2100000, guid: b6a05251b99ef674196947446b266375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Support_Pillar_Dirty
+    second: {fileID: 2100000, guid: 79b3c75aaa688ba4daae7e3d65b4c11f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
