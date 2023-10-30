@@ -24,7 +24,8 @@ public class WaterColliderBehavior : MonoBehaviour
             //chage materials of siblings
             GameObject body = transform.parent.Find("ChickenBody.001").gameObject;
             body.GetComponent<Renderer>().material = baseWetMat;
-            GameObject armature = transform.parent.Find("ChickenBody.001").gameObject;
+            GameObject armature = transform.parent.Find("Armature").gameObject;
+            Debug.Log(armature.transform.childCount);
 
         }
     }
