@@ -8,6 +8,7 @@ public class EatingColliderBehavior : MonoBehaviour
     // Start is called before the first frame update
     public GameObject tubeMesh;
     public GameObject chairMesh;
+    public GameObject shapeKeyController; 
     private Collider[] colliders;
 
     void Start()
@@ -37,8 +38,8 @@ public class EatingColliderBehavior : MonoBehaviour
 
     void onTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC")) {
-            return;
-            //set mouth to close
-        };
+             //set mouth to close
+            shapeKeyController.GetComponent<mouthOpenBehavior>().isOpening = false;
+        }
     }
 }
