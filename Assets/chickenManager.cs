@@ -9,12 +9,21 @@ using UnityEngine;
 public class chickenManager : MonoBehaviour
 {
     [Tooltip("the chicken prefab used for instantiating the main chicken")]
-    public GameObject mamaChicken;
-    public GameObject npcChicken;
+    public GameObject mainChicknePrefab;
+    public GameObject npcChickenPrefab;
     public float loopDuration;
+    public int numNPCChicken;
+
+    private class NPCChicken
+    {
+        public GameObject gameObject;
+        public float percentage;
+        public GameObject lookTarget;
+    }
 
     private Transform[] path;
-    private List<GameObject> chickens = new List<GameObject>();
+    private GameObject mainChicken;
+    private List<NPCChicken> npcChickenList = new List<NPCChicken>();
     private enum Warp { waiting, warping, complete };
     private Warp timeWarp;
     private int framesWarped = 0;
@@ -28,10 +37,10 @@ public class chickenManager : MonoBehaviour
 
     void Start()
     {
-        GameObject chickenInstance = Instantiate(mamaChicken, path[0]);
-        chickens.Add(chickenInstance);
-        //iTween.PutOnPath(chickenInstance, path, 0.5f);
-        iTween.MoveTo(chickenInstance, iTween.Hash("name", "chickenAnimation",
+        Time.fixedDeltaTime = 0.02f;
+        
+        mainChicken = Instantiate(mainChicknePrefab, path[0]);
+        iTween.MoveTo(mainChicken, iTween.Hash("name", "mainChickenAnimation",
                                                "time", loopDuration,
                                                "path", path,
                                                "looktime", 0.1,
@@ -39,35 +48,36 @@ public class chickenManager : MonoBehaviour
                                                "easetype", iTween.EaseType.linear,
                                                "looptype", iTween.LoopType.loop,
                                                "orienttopath", true,
-                                               "delay", 20.0f));
+                                               "delay", 0f));
         
-        Time.fixedDeltaTime = 0.02f;
-        timeWarp = Warp.waiting;
+        for (int i = 0; i < numNPCChicken; i++)
+        {
+            float percent = 1f - (1f / (numNPCChicken + 1f) * i);
+
+            npcChickenList.Add(new NPCChicken{
+                               gameObject = Instantiate(npcChickenPrefab, iTween.PointOnPath(path, percent), Quaternion.identity),
+                               percentage = percent,
+                               lookTarget = i == 0 ? mainChicken : npcChickenList[i - 1].gameObject });
+        }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-#if UNITY_EDITOR
-        if (framesWarped == 0)
+        float percentageDelta = Time.deltaTime / loopDuration;
+
+        foreach (NPCChicken chicken in npcChickenList) 
         {
-            Time.timeScale = 10.0f;
+            chicken.percentage += percentageDelta;
+            chicken.gameObject.transform.position = iTween.PointOnPath(path, chicken.percentage);
         }
-        else if (framesWarped == loopDuration * 50f / 10f)
+    }
+    void FixedUpdate()
+    {
+        foreach (NPCChicken chicken in npcChickenList)
         {
-            Time.timeScale = 1.0f;
-            Debug.Log(Time.time);
+            iTween.LookUpdate(chicken.gameObject, iTween.Hash("axis", "y",
+                                                              "time", 0.02f,
+                                                              "looktarget", chicken.lookTarget.transform));
         }
-        framesWarped++;
-        
-#else
-        if (timeWarp == Warp.waiting)
-        {
-            Time.timeScale = loopDuration / 0.02f;
-            timeWarp = Warp.warping;
-        } else if (timeWarp == Warp.warping)
-        {
-            timeWarp = Warp.complete;
-        }
-#endif
-        }
+    }
 }
