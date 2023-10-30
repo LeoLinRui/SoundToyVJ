@@ -21,11 +21,15 @@ public class WaterColliderBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC")) {
+            //Debug.Log(other.gameObject.name);
             //chage materials of siblings
-            GameObject body = transform.parent.Find("ChickenBody.001").gameObject;
+            GameObject body = other.transform.parent.Find("ChickenBody.001").gameObject;
             body.GetComponent<Renderer>().material = baseWetMat;
-            GameObject armature = transform.parent.Find("Armature").gameObject;
-            Debug.Log(armature.transform.childCount);
+            GameObject armature = other.transform.parent.Find("Armature").gameObject;
+            //Debug.Log(armature.GetComponentsInChildren<Transform>().Length);
+            foreach(Renderer renderer in armature.GetComponentsInChildren<Renderer>()) {
+                renderer.material = feather1WetMat;
+            }
 
         }
     }
