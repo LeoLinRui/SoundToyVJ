@@ -7,6 +7,7 @@ using UnityEngine;
 public class pathManager : MonoBehaviour
 {
     public GameObject[] modules;
+    public GameObject wayPointVisualPrefab;
 
     [System.NonSerialized]
     public Transform[] animationPath;
@@ -20,6 +21,11 @@ public class pathManager : MonoBehaviour
     {
         Collect();
         iTween.DrawPath(animationPath);
+
+        foreach (Transform wayPoint in animationPath)
+        {
+            Gizmos.DrawSphere(wayPoint.position, 2f);
+        }
     }
 
     private void Collect()
