@@ -11,6 +11,8 @@ public class waypoints : MonoBehaviour
     [System.NonSerialized]
     public List<Transform> path = new List<Transform>();
 
+    private uint gizmoDrawCount = 0;
+
     void Awake()
     {
         for (int i = 1; i <= numWaypoints; i++)
@@ -20,6 +22,26 @@ public class waypoints : MonoBehaviour
             {
                 path.Add(childTransform.transform);
             }
+        }
+    }
+
+    void _OnDrawGizmos()
+    {
+        if (gizmoDrawCount == 30)
+        {
+            gizmoDrawCount = 0;
+            for (int i = 1; i <= numWaypoints; i++)
+            {
+                Transform childTransform = this.transform.Find(i.ToString()).transform;
+                if (childTransform != null)
+                {
+                    path.Add(childTransform.transform);
+                }
+            }
+        }
+        else
+        {
+            gizmoDrawCount++;
         }
     }
 }

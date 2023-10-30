@@ -14,24 +14,22 @@ public class chickenManager : MonoBehaviour
     private Transform[] path;
     private List<GameObject> chickens = new List<GameObject>();
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        path = GetComponent<pathManager>().animationPath;
+        Debug.Log("AnimationPath: " + path.Length);
+    }
+
     void Start()
     {
-        path = GetComponent<pathManager>().animationPath.ToArray();
-        Debug.Log("AnimationPath: " + path.Length);
+        
         chickens.Add(Instantiate(mamaChicken, path[0]));
         iTween.MoveTo(chickens[0], iTween.Hash("name", "chickenAnimation", 
-                                               "time", 90.0f, 
+                                               "time", 30.0f, 
                                                "path", path, 
                                                "looktime", 1, 
                                                "lookahead", 0.6,
                                                "easetype", iTween.EaseType.linear,
                                                "looptype", iTween.LoopType.loop));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
