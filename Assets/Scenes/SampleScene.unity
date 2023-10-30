@@ -5241,6 +5241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mamaChicken: {fileID: 1560154852326872204, guid: 118e35b1be7b2d44e9b35b1abc265350, type: 3}
+  npcChicken: {fileID: 0}
+  loopDuration: 60
 --- !u!114 &41578759
 MonoBehaviour:
   m_ObjectHideFlags: 0
