@@ -23,7 +23,7 @@ public class OilColliderBehavior : MonoBehaviour
             //chage materials of siblings
             GameObject body = other.transform.parent.Find("ChickenBody.001").gameObject;
             body.GetComponent<Renderer>().material = cookedMat;
-            other.transform.parent.parent.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            other.transform.parent.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
     }
 }
