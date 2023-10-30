@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[DefaultExecutionOrder(-99)]
 public class pathManager : MonoBehaviour
 {
     public GameObject[] modules;
@@ -11,34 +11,34 @@ public class pathManager : MonoBehaviour
     [System.NonSerialized]
     public Transform[] animationPath;
 
-    private List<Transform> pathList = new List<Transform>();
-    private uint gizmoDrawCount = 0;
-
     void Awake()
     {
         Collect();
     }
 
-    
-    private void _OnDrawGizmos()
+    private void OnDrawGizmos()
     {
-        if (gizmoDrawCount == 30)
-        {
-            gizmoDrawCount = 0;
-            Collect();
-        } else
-        {
-            gizmoDrawCount++;
-        }
-        
+        Collect();
         iTween.DrawPath(animationPath);
     }
 
     private void Collect()
     {
+        List<Transform> pathList = new List<Transform>();
+
         foreach (var module in modules)
         {
-            pathList.AddRange(module.transform.Find("waypoints").gameObject.GetComponent<waypoints>().path);
+            Transform wayPointList = module.transform.Find("waypoints").transform;
+
+            for (int i = 1; i <= wayPointList.childCount; i++)
+            {
+                Transform wayPoint = wayPointList.Find(i.ToString()).transform;
+
+                if (wayPoint != null)
+                {
+                    pathList.Add(wayPoint.transform);
+                }
+            }
         }
 
         animationPath = pathList.ToArray();

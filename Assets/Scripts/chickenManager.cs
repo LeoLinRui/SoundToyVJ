@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-[DefaultExecutionOrder(-98)]
 public class chickenManager : MonoBehaviour
 {
     [Tooltip("the chicken prefab used for instantiating the main chicken")]
@@ -13,6 +12,7 @@ public class chickenManager : MonoBehaviour
     public GameObject npcChickenPrefab;
     public float loopDuration;
     public int numNPCChicken;
+    public int optimizationFactor = 1;
 
     private class NPCChicken
     {
@@ -27,21 +27,13 @@ public class chickenManager : MonoBehaviour
 
     private int fixedFrameCount = 0;
 
-    private enum Warp { waiting, warping, complete };
-    private Warp timeWarp;
-    private int framesWarped = 0;
-
-
-    private void Awake()
-    {
-        path = GetComponent<pathManager>().animationPath;
-        Debug.Log("AnimationPath: " + path.Length);
-    }
-
     void Start()
     {
         Time.fixedDeltaTime = 0.02f;
-        
+
+        path = GetComponent<pathManager>().animationPath;
+        Debug.Log("Animation Path Length: " + path.Length);
+
         mainChicken = Instantiate(mainChicknePrefab, path[0]);
         iTween.MoveTo(mainChicken, iTween.Hash("name", "mainChickenAnimation",
                                                "time", loopDuration,
@@ -76,10 +68,17 @@ public class chickenManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        NPCChicken chosenOne = npcChickenList[fixedFrameCount % npcChickenList.Count()];
-        iTween.LookUpdate(chosenOne.gameObject, iTween.Hash("axis", "y",
-                                                            "time", 0.02f * npcChickenList.Count(),
-                                                            "looktarget", chosenOne.lookTarget.transform));
+        // NPCChicken chosenOne = npcChickenList[fixedFrameCount % npcChickenList.Count()];
+        if (fixedFrameCount % optimizationFactor == 0)
+        {
+            foreach (NPCChicken chosenOne in  npcChickenList)
+                {
+                    iTween.LookUpdate(chosenOne.gameObject, iTween.Hash("axis", "y",
+                                                                        "time", 0.02f * npcChickenList.Count(),
+                                                                        "looktarget", chosenOne.lookTarget.transform));
+                }
+        }
+        
         fixedFrameCount++;
     }
 }
