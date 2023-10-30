@@ -30,6 +30,7 @@ public class chickenManager : MonoBehaviour
                                                "looktime", 1, 
                                                "lookahead", 0.6,
                                                "easetype", iTween.EaseType.linear,
-                                               "looptype", iTween.LoopType.loop));
+                                               "looptype", iTween.LoopType.loop,
+                                               "orienttopath", true));
     }
 }
