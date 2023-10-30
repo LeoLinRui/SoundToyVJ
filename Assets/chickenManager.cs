@@ -67,17 +67,15 @@ public class chickenManager : MonoBehaviour
 
         foreach (NPCChicken chicken in npcChickenList) 
         {
-            chicken.percentage += percentageDelta;
+            chicken.percentage = chicken.percentage > 1f ? 0f : chicken.percentage + percentageDelta;
             chicken.gameObject.transform.position = iTween.PointOnPath(path, chicken.percentage);
         }
     }
     void FixedUpdate()
     {
-        foreach (NPCChicken chicken in npcChickenList)
-        {
-            iTween.LookUpdate(chicken.gameObject, iTween.Hash("axis", "y",
-                                                              "time", 0.02f,
-                                                              "looktarget", chicken.lookTarget.transform));
-        }
+        NPCChicken chosenOne = npcChickenList[Time.frameCount % npcChickenList.Count()];
+        iTween.LookUpdate(chosenOne.gameObject, iTween.Hash("axis", "y",
+                                                            "time", 0.02f * npcChickenList.Count(),
+                                                            "looktarget", chosenOne.lookTarget.transform));
     }
 }
