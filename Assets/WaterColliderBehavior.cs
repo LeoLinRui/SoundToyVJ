@@ -18,4 +18,13 @@ public class WaterColliderBehavior : MonoBehaviour
     {
         
     }
+
+    void onTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC")) {
+            //chage materials of siblings
+            GameObject body = transform.parent.Find("ChickenBody.001").gameObject;
+            body.GetComponent<Renderer>().material = baseWetMat;
+
+        }
+    }
 }

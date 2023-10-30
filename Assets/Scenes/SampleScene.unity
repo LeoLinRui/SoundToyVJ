@@ -17785,8 +17785,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.36000007, y: 0.21761252, z: 0.27319422}
-  m_Center: {x: 0, y: 0.43269938, z: -0.18125065}
+  m_Size: {x: 0.7, y: 1.13, z: 0.53}
+  m_Center: {x: 0, y: 0.43269938, z: -0.24}
 --- !u!65 &578248509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17806,7 +17806,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.12526865, y: 0.15080175, z: 1.2950509}
+  m_Size: {x: 0.38, y: 0.37, z: 1.2950509}
   m_Center: {x: 0.01, y: 0.4037597, z: -0.7513198}
 --- !u!1 &663808248 stripped
 GameObject:
@@ -37957,7 +37957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821799130}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.033842668, y: -0.8381186, z: -0.052340586, w: 0.5419154}
+  m_LocalRotation: {x: -0.03384268, y: -0.8381186, z: -0.052340597, w: 0.5419155}
   m_LocalPosition: {x: 101.72523, y: -24.7724, z: 142.15433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39630,7 +39630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652766097411315210, guid: 32d38232ee0965b48b7f273586a55272, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855873600020791999, guid: 32d38232ee0965b48b7f273586a55272, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[1]
