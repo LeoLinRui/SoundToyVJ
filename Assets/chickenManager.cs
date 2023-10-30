@@ -52,7 +52,7 @@ public class chickenManager : MonoBehaviour
         
         for (int i = 0; i < numNPCChicken; i++)
         {
-            float percent = 1f - (1f / (numNPCChicken + 1f) * i);
+            float percent = 1f - (1f / (numNPCChicken + 1f) * (i + 1));
 
             npcChickenList.Add(new NPCChicken{
                                gameObject = Instantiate(npcChickenPrefab, iTween.PointOnPath(path, percent), Quaternion.identity),
@@ -67,7 +67,7 @@ public class chickenManager : MonoBehaviour
 
         foreach (NPCChicken chicken in npcChickenList) 
         {
-            chicken.percentage = chicken.percentage > 1f ? 0f : chicken.percentage + percentageDelta;
+            chicken.percentage = chicken.percentage >= 1f ? 0f : chicken.percentage + percentageDelta;
             chicken.gameObject.transform.position = iTween.PointOnPath(path, chicken.percentage);
         }
     }
