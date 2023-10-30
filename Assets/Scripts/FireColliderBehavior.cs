@@ -25,9 +25,11 @@ public class FireColliderBehavior : MonoBehaviour
             body.GetComponent<Renderer>().material = defeatheredMat;
 
             
-            if(other.gameObject.CompareTag("Player")) {
+            if (other.gameObject.CompareTag("Player")) {
                 ParticleSystem explosion = other.transform.parent.Find("Feather Explosion").GetComponent<ParticleSystem>();
+                ParticleSystem smoke = other.transform.parent.Find("Explosion Smoke").GetComponent<ParticleSystem>();
                 explosion.Play();
+                smoke.Play();
 
                 GameObject armature = other.transform.parent.Find("Armature").gameObject;
 

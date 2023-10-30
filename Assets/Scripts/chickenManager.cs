@@ -39,7 +39,7 @@ public class chickenManager : MonoBehaviour
                                                "time", loopDuration,
                                                "path", path,
                                                "looktime", 0.1,
-                                               "lookahead", 0.07,
+                                               "lookahead", 0.03,
                                                "easetype", iTween.EaseType.linear,
                                                "looptype", iTween.LoopType.loop,
                                                "orienttopath", true,
