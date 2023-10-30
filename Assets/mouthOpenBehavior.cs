@@ -19,18 +19,19 @@ public class mouthOpenBehavior : MonoBehaviour
     {
         SkinnedMeshRenderer renderer = shapeKeyMesh.GetComponent<SkinnedMeshRenderer>();
         float originalWeight =  renderer.GetBlendShapeWeight(MOUTH_OPEN_IDX);
+
         if(isOpening) {
             renderer.SetBlendShapeWeight(MOUTH_OPEN_IDX, 
-                    Mathf.Min(originalWeight + Time.deltaTime, 100.0f));
+                    Mathf.Min(originalWeight + Time.deltaTime*50f, 100.0f));
         } 
         else {
             renderer.SetBlendShapeWeight(MOUTH_OPEN_IDX, 
-                    Mathf.Max(originalWeight - Time.deltaTime, 0.0f));
+                    Mathf.Max(originalWeight - Time.deltaTime*50f, 0.0f));
         }
 
     }
 
-    void onTriggerEnter(Collider chicken) {
+    void OnTriggerEnter(Collider chicken) {
         isOpening = true;
     }
 }

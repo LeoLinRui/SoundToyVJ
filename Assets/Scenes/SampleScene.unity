@@ -17628,7 +17628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tubeMesh: {fileID: 26448302}
   chairMesh: {fileID: 1476866141}
-  shapeKeyMesh: {fileID: 1157944338}
+  shapeKeyController: {fileID: 1669530222}
 --- !u!65 &578248508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17648,7 +17648,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 1.13, z: 0.53}
+  m_Size: {x: 1.05, y: 1.13, z: 0.53}
   m_Center: {x: 0, y: 0.43269938, z: -0.24}
 --- !u!65 &578248509
 BoxCollider:
@@ -32251,7 +32251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b594ac0805d29e947963feda80da526b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeKeymesh: {fileID: 1157944338}
+  shapeKeyMesh: {fileID: 1157944338}
   isOpening: 0
 --- !u!65 &1669530225
 BoxCollider:
@@ -32272,7 +32272,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 85.05427, y: 87.097626, z: 13.370637}
+  m_Size: {x: 103.25, y: 87.097626, z: 21.3}
   m_Center: {x: 1.6626284, y: 21.30686, z: -6.1853185}
 --- !u!1 &1673170023
 GameObject:
