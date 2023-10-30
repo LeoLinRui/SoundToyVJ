@@ -3,7 +3,27 @@ guid: 834140a8a4c170d49b181ce60881e76f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMat
+    second: {fileID: 2100000, guid: 5ab53b871acda5c48a54287e8f9826ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LipssMat
+    second: {fileID: 2100000, guid: af41d0709e4081a4c8d8548e19682b41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinMat
+    second: {fileID: 2100000, guid: cf174bb32245a2042a861a9937616d14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: diaperMat
+    second: {fileID: 2100000, guid: c58cd71c5f09c3e47bc6615bf1b20f41, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

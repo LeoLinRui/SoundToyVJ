@@ -56,14 +56,17 @@ Shader "Custom/TransparentWarpShaderCullOff"
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
 
+        float _warpVal;
         void vert (inout appdata_full v)
         {
-          /*float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
+          
+          float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
           float dist = length(_WorldSpaceCameraPos.xyz - worldPos.xyz);
 
-          worldPos.y -= (dist*dist)/5000;
+          worldPos.y -= _warpVal*(dist*dist)/5000;
 
-          v.vertex = mul(unity_WorldToObject, worldPos);*/
+          v.vertex = mul(unity_WorldToObject, worldPos);
+
         }
 
         sampler2D _MainTex;

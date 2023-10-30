@@ -29,7 +29,7 @@ Shader "Custom/surfaceShaderVertexWarpScrolling"
         CGPROGRAM
 
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard fullforwardshadows vertex
         #pragma vertex vert
 
         // Use shader model 3.0 target, to get nicer looking lighting
@@ -60,16 +60,17 @@ Shader "Custom/surfaceShaderVertexWarpScrolling"
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
 
+        float _warpVal;
         void vert (inout appdata_full v)
         {
           
-          /*float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
+          float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
           float dist = length(_WorldSpaceCameraPos.xyz - worldPos.xyz);
 
-          worldPos.y -= (dist*dist)/5000;
+          worldPos.y -= _warpVal*(dist*dist)/5000;
 
           v.vertex = mul(unity_WorldToObject, worldPos);
-          */
+
         }
 
         sampler2D _MainTex;
