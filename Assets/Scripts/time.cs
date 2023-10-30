@@ -19,6 +19,10 @@ public class TimeController : MonoBehaviour
         {
             control77Action.performed += OnControl77Performed;
         }
+
+#if !UNITY_EDITOR
+    Time.timeScale = 0;
+#endif
     }
 
     private void OnControl77Performed(InputAction.CallbackContext context)

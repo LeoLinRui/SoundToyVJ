@@ -18,7 +18,7 @@ public class OilColliderBehavior : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("LOD")|| other.gameObject.CompareTag("NPC")) {
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC") || other.gameObject.CompareTag("LOD")) {
             //Debug.Log(other.gameObject.name);
             //chage materials of siblings
             GameObject body = other.transform.parent.Find("ChickenBody.001").gameObject;
