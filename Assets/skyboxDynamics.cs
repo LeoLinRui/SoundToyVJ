@@ -16,6 +16,7 @@ public class skyboxDynamics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(lastInterp != skyBoxInterp) {
             skyBoxMat.SetFloat("_InterpAmount", skyBoxInterp);
             RenderSettings.ambientIntensity = skyBoxInterp;
