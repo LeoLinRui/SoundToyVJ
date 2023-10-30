@@ -64,6 +64,8 @@ Shader "Custom/TransparentWarpShaderCullOff"
           float dist = length(_WorldSpaceCameraPos.xyz - worldPos.xyz);
 
           worldPos.y -= _warpVal*(dist*dist)/5000;
+          worldPos.x += _warpVal*sin(dist/100)*(dist*dist/2000);
+
 
           v.vertex = mul(unity_WorldToObject, worldPos);
 
