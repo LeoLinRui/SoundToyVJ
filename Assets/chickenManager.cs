@@ -24,6 +24,9 @@ public class chickenManager : MonoBehaviour
     private Transform[] path;
     private GameObject mainChicken;
     private List<NPCChicken> npcChickenList = new List<NPCChicken>();
+
+    private int fixedFrameCount = 0;
+
     private enum Warp { waiting, warping, complete };
     private Warp timeWarp;
     private int framesWarped = 0;
@@ -73,9 +76,10 @@ public class chickenManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        NPCChicken chosenOne = npcChickenList[Time.frameCount % npcChickenList.Count()];
+        NPCChicken chosenOne = npcChickenList[fixedFrameCount % npcChickenList.Count()];
         iTween.LookUpdate(chosenOne.gameObject, iTween.Hash("axis", "y",
                                                             "time", 0.02f * npcChickenList.Count(),
                                                             "looktarget", chosenOne.lookTarget.transform));
+        fixedFrameCount++;
     }
 }
