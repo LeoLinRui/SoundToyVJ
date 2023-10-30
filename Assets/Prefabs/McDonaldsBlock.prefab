@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 624275738682163209}
@@ -313,7 +313,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3319492000944017347, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 6583256002609672317, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2781443053557759125, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2559315380777520292, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
@@ -375,7 +379,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3319492000944017347, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 6583256002609672317, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2781443053557759125, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2559315380777520292, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
@@ -437,7 +445,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3319492000944017347, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 6583256002609672317, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2781443053557759125, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
+    - {fileID: 2559315380777520292, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83a7c4c60cc7e348baf37c23f4b38dd, type: 3}
