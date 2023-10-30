@@ -5194,7 +5194,6 @@ GameObject:
   - component: {fileID: 41578760}
   - component: {fileID: 41578759}
   - component: {fileID: 41578758}
-  - component: {fileID: 41578761}
   m_Layer: 0
   m_Name: main
   m_TagString: Untagged
@@ -5313,7 +5312,7 @@ MonoBehaviour:
   mainChicknePrefab: {fileID: 1560154852326872204, guid: 118e35b1be7b2d44e9b35b1abc265350, type: 3}
   npcChickenPrefab: {fileID: 1560154852326872204, guid: f73d42c371175ee48b0fdf74c6940db8, type: 3}
   loopDuration: 60
-  numNPCChicken: 119
+  numNPCChicken: 59
 --- !u!114 &41578759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5429,20 +5428,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &41578761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41578753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2880210b51d66d947939384d9966248d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enablePlanet: 0
-  warpVal: 0
 --- !u!1 &44756767
 GameObject:
   m_ObjectHideFlags: 0
