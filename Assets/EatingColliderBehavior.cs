@@ -37,7 +37,6 @@ public class EatingColliderBehavior : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("here");
         if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC")) {
              //set mouth to close
             shapeKeyController.GetComponent<mouthOpenBehavior>().isOpening = false;

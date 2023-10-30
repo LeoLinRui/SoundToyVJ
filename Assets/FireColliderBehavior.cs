@@ -29,7 +29,7 @@ public class FireColliderBehavior : MonoBehaviour
                 renderer.enabled = false;
             }
             if(other.gameObject.CompareTag("Player")) {
-                ParticleSystem explosion = other.transform.parent.parent.Find("Feather Explosion").GetComponent<ParticleSystem>();
+                ParticleSystem explosion = other.transform.parent.Find("Feather Explosion").GetComponent<ParticleSystem>();
                 explosion.Play();
             }
         }
