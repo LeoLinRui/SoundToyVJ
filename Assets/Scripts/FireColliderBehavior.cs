@@ -18,7 +18,7 @@ public class FireColliderBehavior : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC")) {
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("LOD") || other.gameObject.CompareTag("NPC")) {
             //Debug.Log(other.gameObject.name);
             //chage materials of siblings
             GameObject body = other.transform.parent.Find("ChickenBody.001").gameObject;
@@ -31,6 +31,13 @@ public class FireColliderBehavior : MonoBehaviour
                 explosion.Play();
                 smoke.Play();
 
+                GameObject armature = other.transform.parent.Find("Armature").gameObject;
+
+                //Debug.Log(armature.GetComponentsInChildren<Transform>().Length);
+                foreach(Renderer renderer in armature.GetComponentsInChildren<Renderer>()) {
+                    renderer.enabled = false;
+                }
+            } else if (other.gameObject.CompareTag("NPC")) {
                 GameObject armature = other.transform.parent.Find("Armature").gameObject;
 
                 //Debug.Log(armature.GetComponentsInChildren<Transform>().Length);
