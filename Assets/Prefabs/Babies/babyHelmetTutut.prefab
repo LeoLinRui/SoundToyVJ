@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792586631572857137}
   m_Layer: 0
-  m_Name: babyHelmetWorkingOnDevice
+  m_Name: babyHelmetTutut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ Animator:
   m_GameObject: {fileID: 6013388424828808725}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26d7268b2f8157348bdeb8f6c8255a3d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2938fce7843851c478ee0b5b9d255c3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
