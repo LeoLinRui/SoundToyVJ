@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+[DefaultExecutionOrder(-99)]
 public class chickenManager : MonoBehaviour
 {
     [Tooltip("the chicken prefab used for instantiating the main chicken")]

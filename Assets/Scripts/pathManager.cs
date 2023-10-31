@@ -4,6 +4,7 @@ using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class pathManager : MonoBehaviour
 {
     public GameObject[] modules;
