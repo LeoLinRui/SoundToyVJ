@@ -13,13 +13,15 @@ public class cameraController : MonoBehaviour
     public CinemachineVirtualCamera[] virtualSceneCameras;
 
     private CinemachineVirtualCamera[] virtualChickenCameras = new CinemachineVirtualCamera[8];
-    private GameObject prevChicken;
 
-    void Start()
+    private void Start()
     {
-        prevChicken = GetComponent<chickenManager>().mainChickenObject;
-        initCMVCs();
-        
+        Transform CMVCChicken = GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC");
+        for (int i = 1; i <= 8; i++)
+        {
+            virtualChickenCameras[i - 1] = CMVCChicken.Find(i.ToString()).GetComponent<CinemachineVirtualCamera>();
+        }
+
         InputActionMap buttonMapScene = actionAsset.FindActionMap("Track Focus");
 
         Debug.Assert(virtualSceneCameras.Length <= 8);
@@ -39,15 +41,6 @@ public class cameraController : MonoBehaviour
             int camIndex = i;  // Necessary to avoid "modified closure" problem
             buttonMap.actions[i].performed += SwitchToChickenCamera(camIndex);
         }
-    }
-
-    private void initCMVCs()
-    {
-        Transform CMVCChicken = GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC");
-        for (int i = 1; i <= 8; i++)
-        {
-            virtualChickenCameras[i - 1] = CMVCChicken.Find(i.ToString()).GetComponent<CinemachineVirtualCamera>();
-        }        
     }
 
     private Action<InputAction.CallbackContext> SwitchToSceneCamera(int index)
@@ -98,14 +91,5 @@ public class cameraController : MonoBehaviour
     private void OnDisable()
     {
         actionAsset.Disable();  // Assuming you want to disable the entire asset
-    }
-
-    private void Update()
-    {
-        if (GetComponent<chickenManager>().mainChickenObject != prevChicken)
-        {
-            initCMVCs();
-        }
-        prevChicken = GetComponent<chickenManager>().mainChickenObject;
     }
 }
