@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 [DefaultExecutionOrder(-98)]
 public class TimeController : MonoBehaviour
