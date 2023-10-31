@@ -7,7 +7,7 @@ public class EatingColliderBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject tubeMesh;
-    public GameObject chairMesh;
+    public GameObject[] hideWhileInTubeObjs;
     public GameObject shapeKeyController; 
     private Collider[] colliders;
 
@@ -29,10 +29,16 @@ public class EatingColliderBehavior : MonoBehaviour
         }
         if (inBaby) {
             if(!tubeMesh.GetComponent<Renderer>().enabled) tubeMesh.GetComponent<Renderer>().enabled = true;
-            if(chairMesh.GetComponent<Renderer>().enabled) chairMesh.GetComponent<Renderer>().enabled = false;
+            foreach(GameObject hideObj in hideWhileInTubeObjs) {
+                Renderer r  = hideObj.GetComponent<Renderer>();
+                if(r  && r.enabled) r.enabled = false;
+            }
         } else {
            if(tubeMesh.GetComponent<Renderer>().enabled) tubeMesh.GetComponent<Renderer>().enabled = false;
-           if(!chairMesh.GetComponent<Renderer>().enabled) chairMesh.GetComponent<Renderer>().enabled = true; 
+           foreach(GameObject hideObj in hideWhileInTubeObjs) {
+                Renderer r  = hideObj.GetComponent<Renderer>();
+                if(r  && !r.enabled) r.enabled = true;
+            }
         }
     }
 
