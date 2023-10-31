@@ -9,6 +9,7 @@ public class TimeController : MonoBehaviour
     private InputAction timeScaleAction;
     private InputAction skyboxAction;
     private InputAction volumeAction;
+    private InputAction warpAction;
 
     private InputAction chickenAnimActionA;
     private InputAction chickenAnimActionB;
@@ -24,6 +25,7 @@ public class TimeController : MonoBehaviour
         timeScaleAction = slidersMap.FindAction("A");
         skyboxAction = slidersMap.FindAction("B");
         volumeAction = slidersMap.FindAction("C");
+        warpAction = slidersMap.FindAction("D");
 
         if (timeScaleAction != null)
         {
@@ -36,6 +38,10 @@ public class TimeController : MonoBehaviour
         if (volumeAction != null)
         {
             volumeAction.performed += volumeInputChanged;
+        }
+        if (warpAction != null)
+        {
+            warpAction.performed += warpInputChanged;
         }
 
         InputActionMap sendAMap = actionAsset.FindActionMap("Send A");
@@ -99,6 +105,13 @@ public class TimeController : MonoBehaviour
 
         GetComponent<AudioSource>().volume = value;
     }
+    private void warpInputChanged(InputAction.CallbackContext context)
+    {
+        float value = context.ReadValue<float>();
+
+        GetComponent<VertexShaderController>().warpVal = value;
+    }
+
 
     private void chickenAnimAInputChanged(InputAction.CallbackContext context)
     {
