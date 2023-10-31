@@ -38,13 +38,18 @@ public class FireColliderBehavior : MonoBehaviour
                     renderer.enabled = false;
                 }
             } else if (other.gameObject.CompareTag("NPC")) {
+                ParticleSystem explosion = other.transform.parent.Find("Feather Explosion").GetComponent<ParticleSystem>();
+                ParticleSystem smoke = other.transform.parent.Find("Explosion Smoke").GetComponent<ParticleSystem>();
+                explosion.Play();
+                smoke.Play();
+
                 GameObject armature = other.transform.parent.Find("Armature").gameObject;
 
                 //Debug.Log(armature.GetComponentsInChildren<Transform>().Length);
                 foreach(Renderer renderer in armature.GetComponentsInChildren<Renderer>()) {
                     renderer.enabled = false;
                 }
-            } else //NPC
+            } else //LOD
             {
                 GameObject featherClump = other.transform.parent.Find("FeatherClump").gameObject;
                 featherClump.GetComponent<Renderer>().enabled = false;

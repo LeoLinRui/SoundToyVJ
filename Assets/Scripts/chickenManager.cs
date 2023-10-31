@@ -10,10 +10,12 @@ public class chickenManager : MonoBehaviour
 {
     [Tooltip("the chicken prefab used for instantiating the main chicken")]
     public GameObject mainChicknePrefab;
-    public GameObject npcChickenPrefab;
+    public GameObject highLODchickenPrefab;
+    public GameObject lowLODChickenPrefab;
     public float loopDuration;
     public int numNPCChicken;
     public int optimizationFactor = 1;
+    public int highLODchickenRange = 2;
 
     [System.NonSerialized]
     public GameObject mainChickenObject;
@@ -27,7 +29,8 @@ public class chickenManager : MonoBehaviour
 
     private Transform[] path;
     private Chicken mainChicken;
-    private List<Chicken> npcChickenList = new List<Chicken>();
+    private List<Chicken> highLODChickenList = new List<Chicken>();
+    private List<Chicken> lowLODChickenList = new List<Chicken>();
 
     private int fixedFrameCount = 0;
 
@@ -49,14 +52,15 @@ public class chickenManager : MonoBehaviour
         for (int i = 0; i < numNPCChicken; i++)
         {
             float percent = 1f - (1f / (numNPCChicken + 1) * (i + 1));
+            GameObject chickenPrefab = i <= highLODchickenRange || i >= numNPCChicken - highLODchickenRange - 2 ? highLODchickenPrefab : lowLODChickenPrefab;
 
-            npcChickenList.Add(new Chicken {
-                               gameObject = Instantiate(npcChickenPrefab, iTween.PointOnPath(path, percent), Quaternion.identity),
-                               percentage = percent,
-                               lookTarget = i == 0 ? mainChicken : npcChickenList[i - 1] });
+            lowLODChickenList.Add(new Chicken {
+                                  gameObject = Instantiate(chickenPrefab, iTween.PointOnPath(path, percent), Quaternion.identity),
+                                  percentage = percent,
+                                  lookTarget = i == 0 ? mainChicken : lowLODChickenList[i - 1] });
         }
 
-        mainChicken.lookTarget = npcChickenList[numNPCChicken - 1];
+        mainChicken.lookTarget = lowLODChickenList[numNPCChicken - 1];
     }
 
     private void Update()
@@ -65,9 +69,9 @@ public class chickenManager : MonoBehaviour
 
         updateChickenPos(mainChicken, percentageDelta, mainChicknePrefab);
 
-        foreach (Chicken chicken in npcChickenList) 
+        foreach (Chicken chicken in lowLODChickenList) 
         {
-            updateChickenPos(chicken, percentageDelta, npcChickenPrefab);
+            updateChickenPos(chicken, percentageDelta, lowLODChickenPrefab);
         }
     }
     void FixedUpdate()
@@ -78,10 +82,10 @@ public class chickenManager : MonoBehaviour
 
         if (fixedFrameCount % optimizationFactor == 0)
         {
-            foreach (Chicken chosenOne in  npcChickenList)
+            foreach (Chicken chosenOne in  lowLODChickenList)
                 {
                     iTween.LookUpdate(chosenOne.gameObject, iTween.Hash(//"axis", "y",
-                                                                        "time", 0.02f * npcChickenList.Count(),
+                                                                        "time", 0.02f * lowLODChickenList.Count(),
                                                                         "looktarget", chosenOne.lookTarget.gameObject.transform));
                 }
         }
