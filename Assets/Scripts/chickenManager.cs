@@ -100,6 +100,7 @@ public class chickenManager : MonoBehaviour
             Destroy(chicken.gameObject);
             chicken.percentage = chicken.percentage + delta - 1f;
             chicken.gameObject = Instantiate(prefab, iTween.PointOnPath(path, chicken.percentage), Quaternion.identity);
+            mainChickenObject = chicken.gameObject;
             
         } else
         {
