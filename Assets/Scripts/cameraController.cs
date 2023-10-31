@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 [DefaultExecutionOrder(-98)]
 public class cameraController : MonoBehaviour
 {
+    public GameObject main;
     public InputActionAsset actionAsset;
     public CinemachineVirtualCamera[] virtualSceneCameras;
 
@@ -15,7 +16,7 @@ public class cameraController : MonoBehaviour
 
     private void Start()
     {
-        virtualChickenCameras = GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC").GetComponentsInChildren<CinemachineVirtualCamera>();
+        virtualChickenCameras = main.transform.GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC").GetComponentsInChildren<CinemachineVirtualCamera>();
 
         InputActionMap buttonMapScene = actionAsset.FindActionMap("Track Focus");
 
