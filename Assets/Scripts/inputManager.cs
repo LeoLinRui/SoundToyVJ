@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class TimeController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TimeController : MonoBehaviour
     private InputAction skyboxAction;
     private InputAction volumeAction;
 
+    private Animator chickenAnimator;
     private InputAction chickenAnimActionA;
     private InputAction chickenAnimActionB;
     private InputAction chickenAnimActionC;
@@ -35,6 +37,7 @@ public class TimeController : MonoBehaviour
         }
 
         InputActionMap sendAMap = actionAsset.FindActionMap("Send A");
+        chickenAnimator = GetComponent<chickenManager>().mainChickenObject.transform.Find("Body").GetComponent<Animator>();
 
         chickenAnimActionA = sendAMap.FindAction("A");
         chickenAnimActionB = sendAMap.FindAction("B");
@@ -55,29 +58,42 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         Time.timeScale = 0.5f + value;
-        this.transform.GetComponent<AudioSource>().pitch = 0.5f + value;
+        GetComponent<AudioSource>().pitch = 0.5f + value;
     }
 
     private void skyboxInputChanged(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
 
-        this.transform.GetComponent<skyboxDynamics>().skyBoxInterp = value;
+        GetComponent<skyboxDynamics>().skyBoxInterp = value;
     }
 
     private void volumeInputChanged(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
 
-        this.transform.GetComponent<AudioSource>().volume = value;
+        GetComponent<AudioSource>().volume = value;
     }
 
     private void chickenAnimAInputChanged(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
 
-        this.transform.GetComponent<chickenManager>().mainChickenObject.GetComponent<Animator>().SetFloat("ChickenDance", value);
-        Debug.Log(this.transform.GetComponent<chickenManager>().mainChickenObject.GetComponent<Animator>().GetFloat("ChickenDance"));
+        GetComponent<chickenManager>().mainChickenObject.transform.Find("Body").GetComponent<Animator>().SetFloat("ChickenDance", value);
+    }
+
+    private void chickenAnimBInputChanged(InputAction.CallbackContext context)
+    {
+        float value = context.ReadValue<float>();
+
+        GetComponent<chickenManager>().mainChickenObject.transform.Find("Body").GetComponent<Animator>().SetFloat("Spin", value);
+    }
+
+    private void chickenAnimCInputChanged(InputAction.CallbackContext context)
+    {
+        float value = context.ReadValue<float>();
+
+        GetComponent<chickenManager>().mainChickenObject.transform.Find("Body").GetComponent<Animator>().SetFloat("Spin", value);
     }
 
     private void OnEnable()
