@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PoopBehaviorScript : MonoBehaviour
@@ -34,10 +33,7 @@ public class PoopBehaviorScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player")) {
             Transform poopT = other.transform.parent.Find("poopChicken");
             poopT.parent = other.transform.parent.parent;
-            poopT.AddComponent<Rigidbody>();
             poopT.GetComponent<Rigidbody>().useGravity = true;
-            poopT.GetComponent<Rigidbody>().drag = 10f;
-            poopT.GetComponent<Collider>().enabled = true;
         }
     }
 }

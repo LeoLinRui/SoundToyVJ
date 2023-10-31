@@ -6297,11 +6297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165571572}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0.00046944604, y: 0.90445155, z: -0.0009953496, w: 0.42657498}
-=======
   m_LocalRotation: {x: 0.00046944252, y: 0.90445155, z: -0.000995342, w: 0.42657498}
->>>>>>> parent of b67ee74 (Added babies)
   m_LocalPosition: {x: 6, y: 31, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12558,10 +12554,6 @@ PrefabInstance:
     - target: {fileID: 6497074592275050821, guid: 97c9cfd20ccb5364989cffcc154c6ebc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6812952182997276379, guid: 97c9cfd20ccb5364989cffcc154c6ebc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 8111021530601961329, guid: 97c9cfd20ccb5364989cffcc154c6ebc, type: 3}
       propertyPath: m_Name
@@ -38829,8 +38821,8 @@ Transform:
   m_GameObject: {fileID: 1704179949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.8, y: -10.6, z: 539}
-  m_LocalScale: {x: 25.633938, y: 1, z: 2.436598}
+  m_LocalPosition: {x: 66.2, y: -10.6, z: 536.9}
+  m_LocalScale: {x: 26.05746, y: 1, z: 2.1767}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -39024,11 +39016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768390104}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0.0047922856, y: -0.13106012, z: 0.0006335497, w: 0.99136263}
-=======
   m_LocalRotation: {x: 0.0047922935, y: -0.13106012, z: 0.0006335508, w: 0.99136263}
->>>>>>> parent of b67ee74 (Added babies)
   m_LocalPosition: {x: -100.3, y: -3.3, z: -396.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39490,11 +39478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821799130}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0.00021523297, y: 0.999782, z: -0.013540165, w: 0.015892424}
-=======
   m_LocalRotation: {x: 0.00021523311, y: 0.999782, z: -0.01354017, w: 0.015892427}
->>>>>>> parent of b67ee74 (Added babies)
   m_LocalPosition: {x: 101.72523, y: 8.6, z: 142.15433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
