@@ -11,6 +11,8 @@ public class skyboxDynamics : MonoBehaviour
     void Start()
     {
         skyBoxInterp = 0;
+        RenderSettings.ambientIntensity = skyBoxInterp;
+        RenderSettings.reflectionIntensity = skyBoxInterp/2;
     }
 
     // Update is called once per frame
