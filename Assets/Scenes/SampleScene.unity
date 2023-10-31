@@ -5233,6 +5233,7 @@ MonoBehaviour:
   - {fileID: 1603673931}
   - {fileID: 578248505}
   - {fileID: 44756767}
+  wayPointVisualPrefab: {fileID: 0}
 --- !u!82 &41578760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41248,8 +41249,8 @@ SceneRoots:
   - {fileID: 2313023028847113001}
   - {fileID: 8784639278077611537}
   - {fileID: 45187909}
-  - {fileID: 1692282890}
   - {fileID: 441559016}
+  - {fileID: 1692282890}
   - {fileID: 61892418}
   - {fileID: 932906376}
   - {fileID: 469919463}
