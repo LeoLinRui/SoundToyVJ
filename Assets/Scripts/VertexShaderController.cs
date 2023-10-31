@@ -83,7 +83,7 @@ public class VertexShaderController : MonoBehaviour
   private static void OnBeginCameraRendering (ScriptableRenderContext ctx,
                                               Camera cam)
   {
-    cam.cullingMatrix = Matrix4x4.Ortho(-99, 99, -99, 99, 0.001f, 99) *
+    cam.cullingMatrix = Matrix4x4.Ortho(-499, 499, -499, 499, 0.001f, 499) *
                         cam.worldToCameraMatrix;
   }
 
