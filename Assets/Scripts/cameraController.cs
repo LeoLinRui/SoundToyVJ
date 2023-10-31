@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,11 +12,15 @@ public class cameraController : MonoBehaviour
     public InputActionAsset actionAsset;
     public CinemachineVirtualCamera[] virtualSceneCameras;
 
-    private CinemachineVirtualCamera[] virtualChickenCameras;
+    private CinemachineVirtualCamera[] virtualChickenCameras = new CinemachineVirtualCamera[8];
 
     private void Start()
     {
-        virtualChickenCameras = GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC").GetComponentsInChildren<CinemachineVirtualCamera>();
+        Transform CMVCChicken = GetComponent<chickenManager>().mainChickenObject.transform.Find("CMVC");
+        for (int i = 1; i <= 8; i++)
+        {
+            virtualChickenCameras[i - 1] = CMVCChicken.Find(i.ToString()).GetComponent<CinemachineVirtualCamera>();
+        }
 
         InputActionMap buttonMapScene = actionAsset.FindActionMap("Track Focus");
 
@@ -34,7 +39,7 @@ public class cameraController : MonoBehaviour
         for (int i = 0; i < virtualChickenCameras.Length; i++)
         {
             int camIndex = i;  // Necessary to avoid "modified closure" problem
-            buttonMap.actions[i].performed += SwitchToCamera(camIndex);
+            buttonMap.actions[i].performed += SwitchToChickenCamera(camIndex);
         }
     }
 
@@ -58,7 +63,7 @@ public class cameraController : MonoBehaviour
         };
     }
 
-    private Action<InputAction.CallbackContext> SwitchToCamera(int index)
+    private Action<InputAction.CallbackContext> SwitchToChickenCamera(int index)
     {
         // This function returns another function (the callback to use)
         return (InputAction.CallbackContext context) =>
