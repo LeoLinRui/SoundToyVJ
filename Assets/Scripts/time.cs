@@ -28,7 +28,7 @@ public class TimeController : MonoBehaviour
     private void OnControl77Performed(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
-        Debug.Log(value);
+
         Time.timeScale = 0.5f + value;
         audioSource.pitch = 0.5f + value;
     }

@@ -14,7 +14,7 @@ public class chickenManager : MonoBehaviour
     public int numNPCChicken;
     public int optimizationFactor = 1;
 
-    private class NPCChicken
+    private class Chicken
     {
         public GameObject gameObject;
         public float percentage;
@@ -22,8 +22,8 @@ public class chickenManager : MonoBehaviour
     }
 
     private Transform[] path;
-    private GameObject mainChicken;
-    private List<NPCChicken> npcChickenList = new List<NPCChicken>();
+    private Chicken mainChicken;
+    private List<Chicken> npcChickenList = new List<Chicken>();
 
     private int fixedFrameCount = 0;
 
@@ -34,33 +34,33 @@ public class chickenManager : MonoBehaviour
         path = GetComponent<pathManager>().animationPath;
         Debug.Log("Animation Path Length: " + path.Length);
 
-        mainChicken = Instantiate(mainChicknePrefab, path[0]);
-        iTween.MoveTo(mainChicken, iTween.Hash("name", "mainChickenAnimation",
-                                               "time", loopDuration,
-                                               "path", path,
-                                               "looktime", 0.1,
-                                               "lookahead", 0.03,
-                                               "easetype", iTween.EaseType.linear,
-                                               "looptype", iTween.LoopType.loop,
-                                               "orienttopath", true,
-                                               "delay", 0f));
+        mainChicken = new Chicken {
+                      gameObject = Instantiate(mainChicknePrefab, path[0].position, Quaternion.identity),
+                      percentage = 0f,
+                      lookTarget = null };
+
         
         for (int i = 0; i < numNPCChicken; i++)
         {
-            float percent = 1f - (1f / (numNPCChicken + 1f) * (i + 1));
+            float percent = 1f - (1f / (numNPCChicken + 1) * (i + 1));
 
-            npcChickenList.Add(new NPCChicken{
+            npcChickenList.Add(new Chicken {
                                gameObject = Instantiate(npcChickenPrefab, iTween.PointOnPath(path, percent), Quaternion.identity),
                                percentage = percent,
-                               lookTarget = i == 0 ? mainChicken : npcChickenList[i - 1].gameObject });
+                               lookTarget = i == 0 ? mainChicken.gameObject : npcChickenList[i - 1].gameObject });
         }
+
+        mainChicken.lookTarget = npcChickenList[numNPCChicken - 1].gameObject;
     }
 
     private void Update()
     {
         float percentageDelta = Time.deltaTime / loopDuration;
 
-        foreach (NPCChicken chicken in npcChickenList) 
+        mainChicken.percentage = mainChicken.percentage >= 1f ? 0f : mainChicken.percentage + percentageDelta;
+        mainChicken.gameObject.transform.position = iTween.PointOnPath(path, mainChicken.percentage);
+
+        foreach (Chicken chicken in npcChickenList) 
         {
             chicken.percentage = chicken.percentage >= 1f ? 0f : chicken.percentage + percentageDelta;
             chicken.gameObject.transform.position = iTween.PointOnPath(path, chicken.percentage);
@@ -68,12 +68,15 @@ public class chickenManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        // NPCChicken chosenOne = npcChickenList[fixedFrameCount % npcChickenList.Count()];
+        iTween.LookUpdate(mainChicken.gameObject, iTween.Hash(//"axis", "y",
+                                                            "time", 0.02f,
+                                                            "looktarget", mainChicken.lookTarget.transform));
+
         if (fixedFrameCount % optimizationFactor == 0)
         {
-            foreach (NPCChicken chosenOne in  npcChickenList)
+            foreach (Chicken chosenOne in  npcChickenList)
                 {
-                    iTween.LookUpdate(chosenOne.gameObject, iTween.Hash("axis", "y",
+                    iTween.LookUpdate(chosenOne.gameObject, iTween.Hash(//"axis", "y",
                                                                         "time", 0.02f * npcChickenList.Count(),
                                                                         "looktarget", chosenOne.lookTarget.transform));
                 }
