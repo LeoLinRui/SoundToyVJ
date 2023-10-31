@@ -81,7 +81,6 @@ public class TimeController : MonoBehaviour
 
 #if !UNITY_EDITOR
         Time.timeScale = 0;
-        GetComponent<AudioSource>().pitch = 0;
 #endif
     }
 
@@ -117,7 +116,6 @@ public class TimeController : MonoBehaviour
     private void chickenAnimAInputChanged(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
-        Debug.Log(value);
 
         GetComponent<chickenManager>().mainChickenObject.transform.Find("Body").GetComponent<Animator>().SetFloat("ChickenDance", value);
     }
