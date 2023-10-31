@@ -78,10 +78,6 @@ public class TimeController : MonoBehaviour
         {
             chickenAnimActionF.performed += chickenAnimFInputChanged;
         }
-
-#if !UNITY_EDITOR
-        Time.timeScale = 0;
-#endif
     }
 
     private void timeInputChanged(InputAction.CallbackContext context)
@@ -118,14 +114,15 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
-        Transform poopTA = mainChicken.transform.Find("poopChicken");
-        Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
         mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("ChickenDance", value);
+        Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
+        
+        Transform poopTA = mainChicken.transform.Find("poopChicken");
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("ChickenDance", value);
         } else if(poopTB) {
             poopTB.GetComponent<Animator>().SetFloat("ChickenDance", value);
-        } 
+        }
     }
 
     private void chickenAnimBInputChanged(InputAction.CallbackContext context)
@@ -133,9 +130,9 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
+        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Spin", value);
         Transform poopTA = mainChicken.transform.Find("poopChicken");
         Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
-        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Spin", value);
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("Spin", value);
         } else if(poopTB) {
@@ -148,9 +145,9 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
+        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Stepping", value);
         Transform poopTA = mainChicken.transform.Find("poopChicken");
         Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
-        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Stepping", value);
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("Stepping", value);
         } else if(poopTB) {
@@ -163,9 +160,9 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
+        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Twerk", value);
         Transform poopTA = mainChicken.transform.Find("poopChicken");
         Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
-        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Twerk", value);
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("Twerk", value);
         } else if(poopTB) {
@@ -178,9 +175,9 @@ public class TimeController : MonoBehaviour
         float value = context.ReadValue<float>();
 
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
+        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Twist", value);
         Transform poopTA = mainChicken.transform.Find("poopChicken");
         Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
-        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Twist", value);
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("Twist", value);
         } else if(poopTB) {
@@ -193,9 +190,9 @@ public class TimeController : MonoBehaviour
 
         float value = context.ReadValue<float>();
         GameObject mainChicken = GetComponent<chickenManager>().mainChickenObject;
+        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Salsa", value);
         Transform poopTA = mainChicken.transform.Find("poopChicken");
         Transform poopTB = mainChicken.transform.Find("Body").Find("poopChicken");
-        mainChicken.transform.Find("Body").GetComponent<Animator>().SetFloat("Salsa", value);
         if(poopTA) {
             poopTA.GetComponent<Animator>().SetFloat("Salsa", value);
         } else if(poopTB) {

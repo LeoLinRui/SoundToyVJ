@@ -67,11 +67,11 @@ public class chickenManager : MonoBehaviour
     {
         float percentageDelta = Time.deltaTime / loopDuration;
 
-        updateChickenPos(mainChicken, percentageDelta, mainChicknePrefab);
+        updateChickenPos(mainChicken, percentageDelta, mainChicknePrefab, true);
 
         foreach (Chicken chicken in lowLODChickenList) 
         {
-            updateChickenPos(chicken, percentageDelta, lowLODChickenPrefab);
+            updateChickenPos(chicken, percentageDelta, lowLODChickenPrefab, false);
         }
     }
     void FixedUpdate()
@@ -93,14 +93,14 @@ public class chickenManager : MonoBehaviour
         fixedFrameCount++;
     }
 
-    private void updateChickenPos(Chicken chicken, float delta, GameObject prefab)
+    private void updateChickenPos(Chicken chicken, float delta, GameObject prefab, bool isMain)
     {
         if (chicken.percentage + delta > 1f) // restart
         {
             Destroy(chicken.gameObject);
             chicken.percentage = chicken.percentage + delta - 1f;
             chicken.gameObject = Instantiate(prefab, iTween.PointOnPath(path, chicken.percentage), Quaternion.identity);
-            mainChickenObject = chicken.gameObject;
+            if (isMain){mainChickenObject = chicken.gameObject;}
             
         } else
         {
