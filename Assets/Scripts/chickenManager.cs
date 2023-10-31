@@ -14,6 +14,9 @@ public class chickenManager : MonoBehaviour
     public int numNPCChicken;
     public int optimizationFactor = 1;
 
+    [System.NonSerialized]
+    public GameObject mainChickenObject;
+
     private class Chicken
     {
         public GameObject gameObject;
@@ -34,11 +37,12 @@ public class chickenManager : MonoBehaviour
         path = GetComponent<pathManager>().animationPath;
         Debug.Log("Animation Path Length: " + path.Length);
 
+        mainChickenObject = Instantiate(mainChicknePrefab, path[0].position, Quaternion.identity);
+
         mainChicken = new Chicken {
-                      gameObject = Instantiate(mainChicknePrefab, path[0].position, Quaternion.identity),
+                      gameObject = mainChickenObject,
                       percentage = 0f,
                       lookTarget = null };
-
         
         for (int i = 0; i < numNPCChicken; i++)
         {
