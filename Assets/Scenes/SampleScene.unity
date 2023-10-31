@@ -17744,7 +17744,7 @@ MonoBehaviour:
   tubeMesh: {fileID: 26448302}
   hideWhileInTubeObjs:
   - {fileID: 26448302}
-  - {fileID: 0}
+  - {fileID: 932906377}
   shapeKeyController: {fileID: 1669530222}
 --- !u!65 &578248508
 BoxCollider:
@@ -24160,9 +24160,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8108166044827955757, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8111021530601961329, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
       propertyPath: m_Name
       value: City1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217569300753742859, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218259173982834959, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218505278190753409, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8265684989403405797, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
       propertyPath: m_Enabled
@@ -24217,6 +24233,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+--- !u!1 &932906377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8240583219726170571, guid: 6f8e6443e426b824b80ba255bda4f497, type: 3}
+  m_PrefabInstance: {fileID: 932906376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &942597140
 GameObject:
   m_ObjectHideFlags: 0
