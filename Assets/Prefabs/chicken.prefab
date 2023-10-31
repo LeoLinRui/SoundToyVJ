@@ -123764,7 +123764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1674fb89553ab174298168fc0b97d2b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.036
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1674fb89553ab174298168fc0b97d2b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -123823,7 +123823,7 @@ PrefabInstance:
       addedObject: {fileID: 815852742874615591}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1674fb89553ab174298168fc0b97d2b9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4766413888734587939}
+      addedObject: {fileID: 150488559292120575}
   m_SourcePrefab: {fileID: 100100000, guid: 1674fb89553ab174298168fc0b97d2b9, type: 3}
 --- !u!1 &8132049695021975566 stripped
 GameObject:
@@ -123851,33 +123851,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!54 &4766413888734587939
-Rigidbody:
+--- !u!65 &150488559292120575
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8132049695021975566}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.37, y: 0.84, z: 0.61}
+  m_Center: {x: 0, y: 0, z: 0.35}
 --- !u!4 &8903907491053277876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1674fb89553ab174298168fc0b97d2b9, type: 3}
