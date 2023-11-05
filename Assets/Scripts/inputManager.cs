@@ -78,6 +78,7 @@ public class TimeController : MonoBehaviour
         {
             chickenAnimActionF.performed += chickenAnimFInputChanged;
         }
+
     }
 
     private void timeInputChanged(InputAction.CallbackContext context)
