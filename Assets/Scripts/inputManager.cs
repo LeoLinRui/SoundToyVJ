@@ -79,8 +79,8 @@ public class TimeController : MonoBehaviour
             chickenAnimActionF.performed += chickenAnimFInputChanged;
         }
 
-        Time.timeScale = 0;
-        GetComponent<AudioSource>().pitch = 0;
+        //Time.timeScale = 0;
+        //GetComponent<AudioSource>().pitch = 0;
 
     }
 
